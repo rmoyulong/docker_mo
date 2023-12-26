@@ -138,12 +138,12 @@ jobs:
           dos2unix ./*.sh
           chmod +x ./*.sh
           
+          cd ..
+          cd ./docker
           getini.sh
           cd onecloud
           dos2unix ./*.sh
-          chmod +x ./*.sh
-
-        
+          chmod +x ./*.sh          
         
       - name: 克隆源码库
         working-directory: /workdir
