@@ -132,13 +132,6 @@ jobs:
           chmod +x ./*.sh
           dos2unix ./*.local
           chmod +x ./*.local
-          
-          #sudo bash getini.sh
-          #cd hub/docker
-          sudo curl -L -o set.sh https://raw.githubusercontent.com/rmoyulong/hubdocker_onecloud/master/docker/docker.sh?token=GHSAT0AAAAAACGY545ZU6SJSJSQ2PV6P3EIZMKSFZA
-          
-          dos2unix ./*.sh
-          chmod +x ./*.sh
         
       - name: 克隆源码库
         working-directory: /workdir
@@ -191,6 +184,11 @@ jobs:
           sudo curl -L -o docker/openwrt-armvirt-onecloud-rootfs.tar.gz "${OWRT_CFG}"
           
           cd ./docker
+          sudo curl -L -o set.sh https://raw.githubusercontent.com/rmoyulong/hubdocker_onecloud/master/docker/docker.sh?token=GHSAT0AAAAAACGY545ZU6SJSJSQ2PV6P3EIZMKSFZA
+          
+          sudo dos2unix ./*.sh
+          sudo chmod +x ./*.sh
+          
           sudo bash set.sh
           sudo docker login --username="mojialin" --password=$setini_reg
           sudo bash build-docker.sh "${TOWR_TAG}"
