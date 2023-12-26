@@ -133,14 +133,7 @@ jobs:
           dos2unix ./*.local
           chmod +x ./*.local
           
-          #cd ..
-          #cd ./sh
-          #dos2unix ./*.sh
-          #chmod +x ./*.sh
-          
-          #cd ..
-          #cd ./docker
-          getini.sh
+          sudo bash getini.sh
           cd hub/docker
           dos2unix ./*.sh
           chmod +x ./*.sh          
