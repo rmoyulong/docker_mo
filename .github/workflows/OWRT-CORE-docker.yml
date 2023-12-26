@@ -141,7 +141,7 @@ jobs:
           #cd ..
           #cd ./docker
           getini.sh
-          cd onecloud
+          cd onecloud/docker
           dos2unix ./*.sh
           chmod +x ./*.sh          
         
