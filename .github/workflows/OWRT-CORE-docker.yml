@@ -185,7 +185,7 @@ jobs:
  
       - name: 生成hub docker固件
         id: hubdocker
-        uses: rmoyulong/hubdocker_oneclouddocker.sh@master
+        uses: rmoyulong/hubdocker_onecloud/docker.sh@master
         run: |
           sudo curl -L -o docker/openwrt-armvirt-onecloud-rootfs.tar.gz "${OWRT_CFG}"
           
