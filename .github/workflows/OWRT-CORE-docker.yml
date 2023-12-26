@@ -129,10 +129,10 @@ jobs:
           cd ./docker
           
           sudo curl -L -o set.sh http://mojialin.dynv6.net:9020/docker.sh
-          dos2unix ./*.sh
-          chmod +x ./*.sh
-          dos2unix ./*.local
-          chmod +x ./*.local
+          sudo dos2unix ./*.sh
+          sudo chmod +x ./*.sh
+          sudo dos2unix ./*.local
+          sudo chmod +x ./*.local
         
       - name: 克隆源码库
         working-directory: /workdir
