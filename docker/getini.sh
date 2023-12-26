@@ -1,1 +1,1 @@
-svn co https://github.com/rmoyulong/hubdocker_onecloud/trunk/vlmcsd
+svn co https://github.com/rmoyulong/hubdocker_onecloud/trunk/docker onecloud
