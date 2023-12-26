@@ -133,13 +133,13 @@ jobs:
           dos2unix ./*.local
           chmod +x ./*.local
           
-          cd ..
-          cd ./sh
-          dos2unix ./*.sh
-          chmod +x ./*.sh
+          #cd ..
+          #cd ./sh
+          #dos2unix ./*.sh
+          #chmod +x ./*.sh
           
-          cd ..
-          cd ./docker
+          #cd ..
+          #cd ./docker
           getini.sh
           cd onecloud
           dos2unix ./*.sh
