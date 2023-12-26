@@ -6,7 +6,7 @@ fi
 
 TMPDIR=openwrt_rootfs
 OUTDIR=opt/imgs
-IMG_NAME=mojialin/openwrt_Phicomm_n1
+IMG_NAME=mojialin/openwrt_phicomm_n1
 		
 [ -d "$TMPDIR" ] && rm -rf "$TMPDIR"
 mkdir -p "$OUTDIR"
