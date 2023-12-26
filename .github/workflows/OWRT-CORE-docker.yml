@@ -181,13 +181,15 @@ jobs:
  
       - name: 生成hub docker固件
         id: hubdocker
+        env:
+          setini_reg: ""
         run: |
           sudo curl -L -o docker/openwrt-armvirt-onecloud-rootfs.tar.gz "${OWRT_CFG}"
           
           cd ./docker
          
           sudo bash set.sh
-          sudo docker login --username="mojialin" --password=$setini_reg
+          sudo docker login --username="mojialin" --password="$({ env.setini_reg }}"
           sudo bash build-docker.sh "${TOWR_TAG}"
           
           #docker load < opt/imgs/docker-img-openwrt-oncloud-${TOWR_TAG}.gz
