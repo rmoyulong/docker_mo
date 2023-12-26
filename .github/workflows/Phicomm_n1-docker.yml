@@ -1,0 +1,47 @@
+#========================================================================================================================
+# https://github.com/ophub/amlogic-s9xxx-openwrt
+# Description: Use Releases file to packaging
+# Cron: min (0 - 59) / hour (0 - 23) / day of month (1 - 31) / month (1 - 12) / day of week (0 - 6)(Sunday - Saturday)
+#========================================================================================================================
+#CI项目名
+name: 构建斐讯N1 hub-docker正常固件
+
+on:
+  #对应的是 UTC 时间，需要转换，0 代表北京时间8点，每个月1日/15日16点编译一次
+  #关闭则手动编译
+  workflow_dispatch:
+  #schedule:
+    #- cron: 0 8 1,15 * *
+
+#CI权限
+permissions: write-all
+
+#CI任务
+jobs:
+  owrt_config:
+    #调用公用编译核心OWRT-CORE.yml
+    uses: ./.github/workflows/OWRT-CORE-docker-N1.yml
+    with:
+      #编译平台，X64包含X86,arm
+      OWRT_TARGET: s905d
+      #默认主题
+      OWRT_THEME: argon
+      #默认主机名
+      OWRT_NAME: Phicomm_n1
+      #默认密码，仅作展示，更改无效
+      OWRT_PW: password
+      #默认地址
+      OWRT_IP: 192.168.1.110
+      #默认源码
+      OWRT_URL: https://github.com/coolsnowwolf/lede
+      #源码版本
+      OWRT_BRANCH: master
+      #自定义config
+      OWRT_CFG: https://github.com/rmoyulong/rootfs_builder/releases/download/OpenWrt_s905d_23.12.18_16.37.07/openwrt-armvirt-64-generic-rootfs.tar.gz
+      #设备类型
+      OWRT_TYPE: Phicomm_n1-docker
+      OWRT_LINUX: 6.1.68
+      OWRT_FILES: Phicomm_n1/files
+      DIY_P1_SH: lean1.sh
+      DIY_P2_SH: lean2.sh
+      TOWR_TAG: latest
