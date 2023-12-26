@@ -168,14 +168,14 @@ jobs:
           export DOCKER_CLI_EXPERIMENTAL=enabled
           echo "docker buildx 版本"
           docker buildx version
-          echo "ls -l /proc/sys/fs/binfmt_misc"
-          ls -l /proc/sys/fs/binfmt_misc
-          echo "docker run --privileged --rm tonistiigi/binfmt --install all"
-          docker run --privileged --rm tonistiigi/binfmt --install all
-          echo "ls -l /proc/sys/fs/binfmt_misc"
-          ls -l /proc/sys/fs/binfmt_misc
-          #docker buildx create --use --name mybuilder
-          #docker buildx inspect mybuilder --bootstrap
+          #echo "ls -l /proc/sys/fs/binfmt_misc"
+          #ls -l /proc/sys/fs/binfmt_misc
+          #echo "docker run --privileged --rm tonistiigi/binfmt --install all"
+          #docker run --privileged --rm tonistiigi/binfmt --install all
+          #echo "ls -l /proc/sys/fs/binfmt_misc"
+          #ls -l /proc/sys/fs/binfmt_misc
+          docker buildx create --use --name mybuilder
+          docker buildx inspect mybuilder --bootstrap
           echo "docker buildx ls"
           docker buildx ls
  
