@@ -186,9 +186,6 @@ jobs:
           
           cd ./docker
          
-          sudo dos2unix ./*.sh
-          sudo chmod +x ./*.sh
-          
           sudo bash set.sh
           sudo docker login --username="mojialin" --password=$setini_reg
           sudo bash build-docker.sh "${TOWR_TAG}"
