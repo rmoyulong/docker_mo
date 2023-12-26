@@ -16,4 +16,4 @@ cp -f rc.local "$TMPDIR/etc/" && \
 cp -f sysctl.conf "$TMPDIR/etc/" && \
 cp -f firewall.user "$TMPDIR/etc/" && \
 (cd "$TMPDIR" && tar cf ../openwrt-armvirt-64-generic-rootfs.tar .) && \
-docker buildx build --platform linux/arm64 -t ${IMG_NAME}:${TAG} .
+docker buildx build --platform linux/amd64,linux/arm64 -t ${IMG_NAME}:${TAG} .
