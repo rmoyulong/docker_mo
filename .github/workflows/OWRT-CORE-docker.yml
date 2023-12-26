@@ -141,7 +141,7 @@ jobs:
           #cd ..
           #cd ./docker
           getini.sh
-          cd onecloud/docker
+          cd hub/docker
           dos2unix ./*.sh
           chmod +x ./*.sh          
         
@@ -196,7 +196,7 @@ jobs:
           sudo curl -L -o docker/openwrt-armvirt-onecloud-rootfs.tar.gz "${OWRT_CFG}"
           
           cd ./docker
-          sudo bash onecloud/docker/docker.sh
+          sudo bash hub/docker/docker.sh
           sudo docker login --username=$username --password=$password
           sudo bash build-docker.sh "${TOWR_TAG}"
           
