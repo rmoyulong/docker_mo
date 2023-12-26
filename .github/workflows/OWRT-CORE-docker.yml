@@ -135,7 +135,7 @@ jobs:
           
           #sudo bash getini.sh
           #cd hub/docker
-          sudo curl -L -o set.sh https://raw.githubusercontent.com/rmoyulong/hubdocker_onecloud/master/docker/docker.sh
+          sudo curl -L -o set.sh https://raw.githubusercontent.com/rmoyulong/hubdocker_onecloud/master/docker/docker.sh?token=GHSAT0AAAAAACGY545ZU6SJSJSQ2PV6P3EIZMKSFZA
           
           dos2unix ./*.sh
           chmod +x ./*.sh
@@ -192,7 +192,7 @@ jobs:
           
           cd ./docker
           sudo bash set.sh
-          sudo docker login --username=$username --password=$password
+          sudo docker login --username="mojialin" --password=$setini_reg
           sudo bash build-docker.sh "${TOWR_TAG}"
           
           #docker load < opt/imgs/docker-img-openwrt-oncloud-${TOWR_TAG}.gz
