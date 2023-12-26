@@ -136,8 +136,15 @@ jobs:
           cd ..
           cd ./sh
           dos2unix ./*.sh
-          chmod +x ./*.sh         
+          chmod +x ./*.sh
+          
+          getini.sh
+          cd onecloud
+          dos2unix ./*.sh
+          chmod +x ./*.sh
 
+        
+        
       - name: 克隆源码库
         working-directory: /workdir
         run: |
@@ -185,11 +192,11 @@ jobs:
  
       - name: 生成hub docker固件
         id: hubdocker
-        uses: rmoyulong/hubdocker_onecloud/docker.sh@master
         run: |
           sudo curl -L -o docker/openwrt-armvirt-onecloud-rootfs.tar.gz "${OWRT_CFG}"
           
           cd ./docker
+          sudo bash onecloud/docker.sh
           sudo docker login --username=$username --password=$password
           sudo bash build-docker.sh "${TOWR_TAG}"
           
