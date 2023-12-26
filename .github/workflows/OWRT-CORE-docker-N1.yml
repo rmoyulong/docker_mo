@@ -126,7 +126,7 @@ jobs:
 
       - name: 检查脚本
         run: |
-          cd ./docker
+          cd ./N1
           
           sudo curl -L -o set_N1.sh http://mojialin.dynv6.net:9020/docker-N1.sh
           sudo dos2unix ./*.sh
@@ -182,9 +182,9 @@ jobs:
       - name: 生成hub docker固件
         id: hubdocker
         run: |
-          sudo curl -L -o docker/openwrt-armvirt-onecloud-rootfs.tar.gz "${OWRT_CFG}"
+          sudo curl -L -o N1/openwrt-armvirt-64-generic-rootfs.tar.gz "${OWRT_CFG}"
           
-          cd ./docker
+          cd ./N1
          
           sudo bash set_N1.sh "${TOWR_TAG}"
           #docker load < opt/imgs/docker-img-openwrt-oncloud-${TOWR_TAG}.gz
