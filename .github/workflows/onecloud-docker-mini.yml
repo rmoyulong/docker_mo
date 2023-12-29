@@ -37,7 +37,7 @@ jobs:
       #源码版本
       OWRT_BRANCH: master
       #自定义config
-      OWRT_CFG: https://github.com/rmoyulong/OneCloud_OpenWrt/releases/download/OpenWrt_immortalwrt_23.12.24_19.55.13/immortalwrt-meson-meson8b-thunder-onecloud-rootfs.tar.gz
+      OWRT_CFG: https://github.com/rmoyulong/OneCloud_OpenWrt/releases/download/OpenWrt_immortalwrt_23.12.29_21.04.39/immortalwrt-meson-meson8b-thunder-onecloud-rootfs.tar.gz
       #设备类型
       OWRT_TYPE: OneCloud-docker-mini
       OWRT_LINUX: 6.1.68
