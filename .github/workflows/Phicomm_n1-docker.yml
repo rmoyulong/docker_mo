@@ -37,7 +37,7 @@ jobs:
       #源码版本
       OWRT_BRANCH: master
       #自定义config
-      OWRT_CFG: https://github.com/rmoyulong/rootfs_builder/releases/download/OpenWrt_s905d_24.01.15_11.23.39/immortalwrt-armsr-armv8-generic-rootfs.tar.gz
+      OWRT_CFG: https://github.com/rmoyulong/rootfs_builder/releases/download/OpenWrt_s905d_24.01.25_08.51.04/immortalwrt-armsr-armv8-generic-rootfs.tar.gz
       #设备类型
       OWRT_TYPE: Phicomm_n1-docker
       OWRT_LINUX: 6.1.68
