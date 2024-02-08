@@ -182,9 +182,10 @@ jobs:
       - name: 生成hub docker固件
         id: hubdocker
         run: |
-          sudo curl -L -o N1/openwrt-armvirt-64-generic-rootfs.tar.gz "${OWRT_CFG}"
+          sudo curl -L -o N1/openwrt-armvirt-64-generic-rootfs.tar "${OWRT_CFG}"
           
           cd ./N1
+          gzip openwrt-armvirt-onecloud-rootfs.tar
          
           sudo bash set_N1.sh "${TOWR_TAG}"
           #docker load < opt/imgs/docker-img-openwrt-oncloud-${TOWR_TAG}.gz
