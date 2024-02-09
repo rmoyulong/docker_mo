@@ -185,7 +185,7 @@ jobs:
           sudo curl -L -o docker/openwrt-armvirt-onecloud-rootfs.tar "${OWRT_CFG}"
           
           cd ./docker
-          gzip openwrt-armvirt-onecloud-rootfs.tar
+          #gzip openwrt-armvirt-onecloud-rootfs.tar
          
           sudo bash set.sh "${TOWR_TAG}"          
           #docker load < opt/imgs/docker-img-openwrt-oncloud-${TOWR_TAG}.gz
